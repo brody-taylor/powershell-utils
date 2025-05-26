@@ -1,0 +1,1 @@
+Remove-Item -Path "$HOME\Documents\WindowsPowerShell\Modules\PowerShellUtils" -Recurse -Force

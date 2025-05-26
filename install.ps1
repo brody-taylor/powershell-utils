@@ -1,0 +1,1 @@
+Copy-Item -Path ".\PowerShellUtils" -Destination "$HOME\Documents\WindowsPowerShell\Modules\" -Recurse -Force
