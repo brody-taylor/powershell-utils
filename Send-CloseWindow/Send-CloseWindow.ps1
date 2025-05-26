@@ -1,4 +1,17 @@
 function Send-CloseWindow {
+    <#
+    .SYNOPSIS
+    Sends a close command to the specified process.
+
+    .DESCRIPTION
+    This function sends a close command `SC_CLOSE` to the main window of a specified process.
+    It simulates the action of clicking the close button on the window, rather than terminating the process.
+
+    .EXAMPLE
+    Send-CloseWindow MyApplication
+    Sends a close command to `MyApplication`.
+    If `MyApplication` is set to minimize to the system tray on close, it will do so instead of terminating.
+    #>
     param(
         [Parameter(Mandatory = $true)]
         [string]$ProcessName
@@ -22,7 +35,7 @@ function Send-CloseWindow {
         [IntPtr][CloseWindowHelper]::SC_CLOSE,
         [IntPtr]::Zero
     )
-        
+
     if (-not $success) {
         $errorCode = [System.Runtime.InteropServices.Marshal]::GetLastWin32Error()
         throw "Error sending SC_CLOSE to process '$ProcessName': $errorCode"
