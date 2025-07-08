@@ -1,3 +1,5 @@
+. "$PSScriptRoot\Complete-ElevatedTaskName.ps1"
+
 function Register-ElevatedTask {
     <#
     .SYNOPSIS
@@ -104,3 +106,9 @@ function Unregister-ElevatedTask {
 
     Unregister-ScheduledTask -TaskName $Name -TaskPath "\ElevatedTasks\" -Confirm:$false
 }
+
+# Register the argument completer for task names
+Register-ArgumentCompleter -CommandName Start-ElevatedTask -ParameterName Name `
+    -ScriptBlock { Complete-ElevatedTaskName }
+Register-ArgumentCompleter -CommandName Unregister-ElevatedTask -ParameterName Name `
+    -ScriptBlock { Complete-ElevatedTaskName }
