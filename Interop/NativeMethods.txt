@@ -1,3 +1,9 @@
 PostMessage
 WM_SYSCOMMAND
 SC_CLOSE
+
+GetDisplayConfigBufferSizes
+QueryDisplayConfig
+DisplayConfigSetDeviceInfo
+DISPLAYCONFIG_MODE_INFO
+DISPLAYCONFIG_SET_ADVANCED_COLOR_STATE
