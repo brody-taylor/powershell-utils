@@ -1,0 +1,7 @@
+.vscode/
+
+# C# interoperability helpers
+PowerShellUtils/lib/
+Interop/bin/
+Interop/obj/
+*.sln

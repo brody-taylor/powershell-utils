@@ -1,3 +1,5 @@
+Add-Type -Path "$PSScriptRoot\lib\Interop.dll"
+
 . "$PSScriptRoot\Disable-MouseCursor\Disable-MouseCursor.ps1"
 . "$PSScriptRoot\Send-CloseWindow\Send-CloseWindow.ps1"
 . "$PSScriptRoot\Send-KeyShortcut\Send-KeyShortcut.ps1"

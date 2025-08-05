@@ -1,0 +1,3 @@
+PostMessage
+WM_SYSCOMMAND
+SC_CLOSE
