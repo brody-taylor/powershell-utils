@@ -5,9 +5,11 @@ Add-Type -Path "$PSScriptRoot\lib\Interop.dll"
 . "$PSScriptRoot\Send-CloseWindow\Send-CloseWindow.ps1"
 . "$PSScriptRoot\Send-KeyShortcut\Send-KeyShortcut.ps1"
 . "$PSScriptRoot\Start-ElevatedTask\Start-ElevatedTask.ps1"
+. "$PSScriptRoot\Switch-ToggleExecutable\Switch-ToggleExecutable.ps1"
 
 Export-ModuleMember -Function Disable-MouseCursor, Enable-MouseCursor
 Export-ModuleMember -Function Disable-WindowsHDR, Enable-WindowsHDR
 Export-ModuleMember -Function Send-CloseWindow
 Export-ModuleMember -Function Send-KeyShortcut
 Export-ModuleMember -Function Register-ElevatedTask, Start-ElevatedTask, Unregister-ElevatedTask
+Export-ModuleMember -Function Set-ToggleExecutable, Switch-ToggleExecutable
